@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aesthetic Calculator</title>
+    <!-- Include Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white">
+    <div class="container mx-auto max-w-md mt-8 p-4 rounded-lg shadow-lg">
+      <h1 class="text-3xl mb-4 text-center">Aesthetic Calculator</h1>
+      <div class="grid grid-cols-4 gap-4 mb-4">
+        <button class="calc-button" onclick="appendToDisplay('7')">7</button>
+        <button class="calc-button" onclick="appendToDisplay('8')">8</button>
+        <button class="calc-button" onclick="appendToDisplay('9')">9</button>
+        <button
+          class="calc-button text-yellow-600 dark:text-yellow-400"
+          onclick="appendToDisplay('+')"
+        >
+          +
+        </button>
+        <button class="calc-button" onclick="appendToDisplay('4')">4</button>
+        <button class="calc-button" onclick="appendToDisplay('5')">5</button>
+        <button class="calc-button" onclick="appendToDisplay('6')">6</button>
+        <button
+          class="calc-button text-yellow-600 dark:text-yellow-400"
+          onclick="appendToDisplay('-')"
+        >
+          -
+        </button>
+        <button class="calc-button" onclick="appendToDisplay('1')">1</button>
+        <button class="calc-button" onclick="appendToDisplay('2')">2</button>
+        <button class="calc-button" onclick="appendToDisplay('3')">3</button>
+        <button
+          class="calc-button text-yellow-600 dark:text-yellow-400"
+          onclick="appendToDisplay('*')"
+        >
+          *
+        </button>
+        <button class="calc-button col-span-2" onclick="appendToDisplay('0')">
+          0
+        </button>
+        <button class="calc-button" onclick="clearDisplay()">C</button>
+        <button
+          class="calc-button text-yellow-600 dark:text-yellow-400"
+          onclick="calculateResult()"
+        >
+          =
+        </button>
+        <button
+          class="calc-button text-yellow-600 dark:text-yellow-400"
+          onclick="appendToDisplay('/')"
+        >
+          /
+        </button>
+      </div>
+      <input
+        id="display"
+        class="w-full bg-white dark:bg-gray-700 text-right py-2 px-4 rounded-lg mb-4"
+        disabled
+      />
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
