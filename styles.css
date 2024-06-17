@@ -4,6 +4,14 @@
   color: white;
 }
 
+body {
+  font-family: "Spartan", sans-serif;
+  font-weight: 900;
+}
+
+#display {
+  font-size: 30px;
+}
 .calc-button {
   padding: 1.5rem 1rem;
   font-size: 1.5rem;

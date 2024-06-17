@@ -9,13 +9,23 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <!-- Include Spartan Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body class="bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white">
-    <div class="container mx-auto max-w-md mt-8 p-4 rounded-lg shadow-lg">
-      <h1 class="text-3xl mb-4 text-center">Aesthetic Calculator</h1>
+  <body class="bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white p-20">
+    <div class="container mx-auto max-w-md mt-8 p-4 rounded-lg shadow-lg p-5">
+      <input
+        id="display"
+        class="w-full bg-white dark:bg-gray-700 text-right py-2 px-5 rounded-lg mb-4 h-20"
+        disabled
+      />
       <div class="grid grid-cols-4 gap-4 mb-4">
         <button class="calc-button" onclick="appendToDisplay('7')">7</button>
         <button class="calc-button" onclick="appendToDisplay('8')">8</button>
@@ -61,11 +71,6 @@
           /
         </button>
       </div>
-      <input
-        id="display"
-        class="w-full bg-white dark:bg-gray-700 text-right py-2 px-4 rounded-lg mb-4"
-        disabled
-      />
     </div>
 
     <!-- JavaScript -->
