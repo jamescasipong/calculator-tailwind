@@ -1,6 +1,6 @@
 # Sample Calculator
 
-A simple and aesthetic calculator built with HTML, CSS (TailwindCSS), and JavaScript.
+A simple calculator built with HTML, CSS (TailwindCSS), and JavaScript.
 
 ## Features
 
