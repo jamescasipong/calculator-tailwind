@@ -38,14 +38,18 @@ function toggleTheme(){
     return;
   }
 
-  if(isLight){
+  if (isLight){
+    // Switching to dark mode
     getBodyId.id = "dark-mode";
-    element.innerHTML = "Light MODE";
+    element.classList.remove("fas", "fa-moon");
+    element.classList.add("fas", "fa-sun");
     isLight = false;
-    console.log(isLight);
   } else {
+    // Switching to light mode
     getBodyId.id = "light-mode";
-    element.innerHTML = "DAY MODE";
+    element.classList.remove("fas", "fa-sun");
+    element.classList.add("fas", "fa-moon");
     isLight = true;
   }
 }
+

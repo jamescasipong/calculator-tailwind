@@ -3,8 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.dark-mode {
+#dark-mode {
   background-color: #1a202c;
+  color: white;
+}
+
+#dark-mode .fa-moon {
   color: white;
 }
 
