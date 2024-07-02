@@ -1,7 +1,35 @@
 /* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .dark-mode {
   background-color: #1a202c;
   color: white;
+}
+
+#dark-mode .calc-button {
+  padding: 1.5rem 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: black;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+#light-mode {
+  background-color: rgb(229, 231, 235);
+}
+
+#light-mode .calc-button {
+  padding: 1.5rem 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #f0f0f0;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
 }
 
 body {
@@ -12,14 +40,10 @@ body {
 #display {
   font-size: 30px;
 }
+
+
 .calc-button {
-  padding: 1.5rem 1rem;
-  font-size: 1.5rem;
-  text-align: center;
-  background-color: #f0f0f0;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.5rem;
-  transition: background-color 0.3s ease;
+  
 }
 
 .calc-button:hover {
