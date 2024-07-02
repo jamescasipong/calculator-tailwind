@@ -2,13 +2,29 @@
 let displayValue = "";
 
 function appendToDisplay(val, operator) {
+
+
   displayValue = displayValue + val;
-  if (displayValue !== ""){
-    displayValue = displayValue + operator;
-    document.getElementById("display").value = displayValue;
+
+  
+  // Check if the current displayValue already ends with an operator
+  const lastChar = displayValue.slice(-1);
+  if (lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/' || lastChar == '2') {
+    // If the last character is already an operator, do not append another one
+    return;
   }
 
+
+  
+  if (displayValue !== ""){
+  displayValue = displayValue + operator;
+
+  }
+
+  // Update the display
+  document.getElementById("display").value = displayValue;
 }
+
 
 function clearDisplay() {
   displayValue = "";
