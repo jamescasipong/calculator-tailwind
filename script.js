@@ -9,7 +9,7 @@ function appendToDisplay(val, operator) {
   
   // Check if the current displayValue already ends with an operator
   const lastChar = displayValue.slice(-1);
-  if (lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/' || lastChar == '2') {
+  if (lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/') {
     // If the last character is already an operator, do not append another one
     return;
   }
