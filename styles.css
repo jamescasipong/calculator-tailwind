@@ -12,6 +12,10 @@
   color: white;
 }
 
+#dark-mode #display {
+  color: white;
+}
+
 #dark-mode .calc-button {
   padding: 1.5rem 1rem;
   font-size: 1.5rem;
