@@ -28,7 +28,7 @@ let element;
 
 document.addEventListener("DOMContentLoaded", function() {
   // Code here will run after the DOM is fully loaded and parsed
-  getBodyId = document.getElementById("light-mode");
+  getBodyId = document.getElementById("dark-mode");
   element = document.getElementById("toggleMode");
 });
 
