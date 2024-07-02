@@ -58,13 +58,13 @@ document.addEventListener("DOMContentLoaded", function() {
   element = document.getElementById("toggleMode");
 });
 
-function toggleTheme(){
+function toggleTheme() {
   if (!getBodyId) {
     console.error("Element with id 'light-mode' not found.");
     return;
   }
 
-  if (isLight){
+  if (isLight) {
     // Switching to dark mode
     getBodyId.id = "dark-mode";
     element.classList.remove("fas", "fa-sun");
@@ -78,5 +78,24 @@ function toggleTheme(){
     element.classList.add("fas", "fa-sun");
     isLight = true;
   }
+
+  // Save the current theme state to localStorage
+  localStorage.setItem('isLightTheme', isLight);
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Retrieve the theme state from localStorage on page load
+  isLight = localStorage.getItem('isLightTheme') === 'true';
+
+  // Apply the stored theme state
+  if (isLight) {
+    getBodyId.id = "light-mode";
+    element.classList.remove("fas", "fa-moon");
+    element.classList.add("fas", "fa-sun");
+  } else {
+    getBodyId.id = "dark-mode";
+    element.classList.remove("fas", "fa-sun");
+    element.classList.add("fas", "fa-moon");
+  }
+});
 
