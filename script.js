@@ -1,9 +1,13 @@
 // script.js
 let displayValue = "";
 
-function appendToDisplay(val) {
+function appendToDisplay(val, operator) {
   displayValue = displayValue + val;
-  document.getElementById("display").value = displayValue;
+  if (displayValue !== ""){
+    displayValue = displayValue + operator;
+    document.getElementById("display").value = displayValue;
+  }
+
 }
 
 function clearDisplay() {
