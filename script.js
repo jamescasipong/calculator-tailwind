@@ -37,6 +37,12 @@ function calculateResult() {
     document.getElementById("display").value = result;
     displayValue = result.toString(); // Store result for further calculations
   } catch (error) {
+
+    if (lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/' || lastChar == '2') {
+      // If the last character is already an operator, do not append another one
+      return;
+    }
+    
     document.getElementById("display").value = "Error";
     displayValue = ""; // Reset display on error
   }
