@@ -23,7 +23,7 @@ function calculateResult() {
 }
 
 let getBodyId;
-let isLight = true;
+let isLight = false;
 let element;
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -41,14 +41,15 @@ function toggleTheme(){
   if (isLight){
     // Switching to dark mode
     getBodyId.id = "dark-mode";
-    element.classList.remove("fas", "fa-moon");
-    element.classList.add("fas", "fa-sun");
+    element.classList.remove("fas", "fa-sun");
+    element.classList.add("fas", "fa-moon");
+    
     isLight = false;
   } else {
     // Switching to light mode
     getBodyId.id = "light-mode";
-    element.classList.remove("fas", "fa-sun");
-    element.classList.add("fas", "fa-moon");
+    element.classList.remove("fas", "fa-moon");
+    element.classList.add("fas", "fa-sun");
     isLight = true;
   }
 }

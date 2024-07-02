@@ -14,6 +14,12 @@
 
 #dark-mode #display {
   color: #FDD835;
+ 
+}
+
+#dark-mode .container {
+
+  border: 1px solid #e2e8f0;
 }
 
 #dark-mode .calc-button {
@@ -28,6 +34,12 @@
 
 #light-mode {
   background-color: rgb(229, 231, 235);
+  
+}
+
+#light-mode .container, #display {
+
+  border: 1px solid black;
 }
 
 #light-mode .calc-button {
@@ -35,7 +47,7 @@
   font-size: 1.5rem;
   text-align: center;
   background-color: #f0f0f0;
-  border: 1px solid #e2e8f0;
+  border: 1px solid black;
   border-radius: 0.5rem;
   transition: background-color 0.3s ease;
 }
@@ -49,10 +61,6 @@ body {
   font-size: 30px;
 }
 
-
-.calc-button {
-  
-}
 
 .calc-button:hover {
   background-color: #e2e8f0;
